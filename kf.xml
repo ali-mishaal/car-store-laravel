@@ -1,0 +1,25 @@
+<?php
+   
+   require_once('db_variable.php');
+
+   
+   //connection to a MySQL server
+   $connection = mysqli_connect($serve_name , $username , $password);
+   if(!$connection){
+       die('not connection: ' . mysqli_error());
+   }
+
+   $db_selected = mysqli_select_db($db_name , $connection);
+   if (!$db_selected) {
+       die ('Can\'t use db : ' . mysqli_error());
+    }
+
+    // Select all the rows in the markers table
+		$query = "SELECT * FROM markers WHERE 1";
+		$result = mysqli_query($query);
+		if (!$result) {
+		  die('Invalid query: ' . mysqli_error());
+		}
+
+
+?>

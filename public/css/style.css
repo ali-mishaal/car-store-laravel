@@ -1,0 +1,770 @@
+@import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Roboto|Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+/*
+    font-family: 'Allerta Stencil', sans-serif;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+
+    font-family: 'Montserrat', sans-serif;
+
+
+*/
+
+
+
+
+.photo-back-fixed img{
+    width: 100%;
+    height: 697px;
+    position: fixed;
+    z-index: -1;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+
+.lang-lcat{
+
+  padding-left: 68px;
+  z-index: 3;
+}
+
+
+
+.lang-lcat i{
+
+    color: #fff;
+    font-size: 21px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+
+}
+
+.lang-lcat a{
+
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 3px;
+    transition: all .5s;
+}
+
+.lang-lcat a:hover{
+  color: #F57F17;
+}
+
+
+
+.lang-lcat i:last-of-type{
+
+    margin-left: 13px;
+}
+
+.lang-lcat a:first-of-type::after{
+
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 152px;
+    width: 2px;
+    height: 18px;
+    background-color: #fff;
+
+}
+
+
+.sea-log{
+   float: right;
+   padding-right: 17px;
+
+}
+
+.sea-log img{
+    width: 21px;
+    margin-right: 5px;
+}
+
+.sea-log a{
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: all .5s
+}
+
+.sea-log a:first-of-type{
+    padding-right: 10px;
+}
+
+.sea-log a:first-of-type:before{
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 89px;
+    width: 2px;
+    height: 15px;
+    background-color: #fff;
+}
+
+.sea-log a:hover{
+  color: #F57F17;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+.social{
+
+  position: absolute;
+  top: 42%;
+  left: 3%;
+}
+
+.social ul{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.social ul li{
+    margin-bottom: 5px;
+}
+
+.social ul li a{
+    color: #877171;
+    transition: all .5s;
+
+}
+
+.social ul li a:hover{
+  color: #3E2723;
+}
+
+
+.main-header{
+    flex: 1 0 83.333333% !important;
+    max-width: 89.333% !important;
+    background-color: #F57F17;
+    height: 638px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.brush {
+    position: absolute;
+    top: -52px;
+    left: 44px;
+    height: 733px;
+}
+
+.car-header {
+    position: absolute;
+    right: 133px;
+    top: 199px;
+    width: 637px;
+}
+
+.logo{
+
+    font-family: 'Allerta Stencil', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 30px;
+    margin-left: 34px;
+}
+
+.heade-nav{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    float: right;
+    margin-top: -42px;
+    margin-right: 53px;
+}
+
+.heade-nav li{
+    margin-left: 40px;
+}
+
+.heade-nav li:before{
+
+    content: '';
+    position: absolute;
+    top: 65px;
+    width: 85px;
+    height: 1px;
+    background-color: #B71C1C;
+    transform: scale(0);
+    transition: all .5s;
+}
+
+.heade-nav li:nth-of-type(2):before{
+    width:92px;
+}
+
+.heade-nav li:nth-of-type(3):before{
+    width: 126px;
+}
+
+.heade-nav li:nth-of-type(4):before{
+    width: 125px;
+}
+
+.heade-nav li:hover:before{
+  transform: scale(1);
+}
+
+.heade-nav li a{
+    color: #7D3C25;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+
+}
+.slide-word{
+    font-size: 317%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 11px #000;
+    font-weight: 300;
+    font-family: 'Ubuntu', sans-serif;
+    padding-left: 202px;
+    padding-top: 67px;
+    line-height: 45px;
+}
+
+.point-move{
+    background-color: #3E2723;
+    width:80px;
+    height: 92vh;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 999;
+}
+
+.point-move ul{
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.point-move ul li{
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transform: scale(.8);
+  transition: all .5s;
+
+}
+
+#brwonLayer{
+
+  height:92vh;
+  width: 150%;
+  background-color: #3E2723;
+  position: absolute;
+  top:0;
+  left: 100%;
+  z-index: 99;
+
+}
+
+#redLayer{
+  height: 92vh;
+  width: 170%;
+  background-color: #B71C1C;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 9
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+.latest-stories{
+  background-image: linear-gradient(to right, #182839, #2b2d41, #3e3246, #4f3747, #5e3d46, #6c4248, #794947, #855045, #985645, #aa5c45, #bc6244, #ce6941);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 111px;
+  position: relative;
+}
+
+.latest-stories-title{
+  position: absolute;
+  top: 48%;
+  left: 51%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.latest-stories-title span{
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #302c2b;
+  margin-left: 433px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+.photo1-p {
+    margin-top: 40px;
+    margin-left: 51px;
+
+}
+
+.photo1-p img{
+  width: 353px;
+  height: 406px;
+  opacity: .7;
+  transition: all 1s;
+}
+
+.photo1-p .title{
+    position: absolute;
+    top: 72px;
+    left: 486px;
+    padding: 4px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    perspective: 4000px;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.photo1-p .body{
+  position: absolute;
+  top: 130px;
+  left: 491px;
+  color: #fff;
+  width: 41%;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+}
+
+.photo2-p {
+    margin-top: 40px;
+    padding-right: 71px;
+    margin-bottom: 53px;
+
+}
+
+.photo2-p img{
+    width: 453px;
+    height: 307px;
+    float: right;
+    opacity: .7;
+    transition: all 1s;
+}
+
+.photo1-p img:hover , .photo2-p img:hover{
+
+  opacity: 1;
+}
+
+.photo2-p .title{
+  position: absolute;
+  top: 59px;
+  left: 109px;
+  padding: 4px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  perspective: 4000px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.photo2-p .body{
+  position: absolute;
+  top: 119px;
+  left: 114px;
+  color: #fff;
+  width: 41%;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: "Montserrat",sans-serif;
+  font-weight: 400;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+.trending-search{
+  background-color: #3E2723;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.trending-searches-title{
+    margin-top: 54px;
+}
+
+.trending-searches-title p{
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #BF360C;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.trending-searches-title p span{
+    border: 1px solid;
+}
+
+.trending-searches-body{
+    background-color: #333333;
+    height: 770px;
+    margin-top: 52px;
+
+}
+
+.trending-searches{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 70px;
+  margin-top: 36px;
+  margin-bottom: 39px;
+}
+
+.trending-searches div{
+    width: 200px;
+    height: 303px;
+    overflow: hidden;
+    border: 1px solid #663333;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trending-searches div p , .main-trending-searches p{
+    font-family: 'Ubuntu', sans-serif;
+    color: #BF360C;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.trending-searches div img:first-of-type{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    width: 108px;
+    opacity: 0.7;
+
+}
+
+.trending-searches div img:last-of-type{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 92%;
+}
+
+.main-trending-searches{
+    width: 296px;
+    height: 481px;
+    overflow: hidden;
+    border: 1px solid #663333;
+    margin: 93px 0 0 28px;
+    position: relative;
+}
+
+.main-trending-searches p{
+    font-size: 17px;
+}
+
+.main-trending-searches img:first-of-type{
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    width: 216px;
+    opacity: .7;
+
+}
+
+.main-trending-searches img:last-of-type{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 95%;
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+.new-car-review{
+  background-image: linear-gradient(to right, #182839, #2b2d41, #3e3246, #4f3747, #5e3d46, #6c4248, #794947, #855045, #985645, #aa5c45, #bc6244, #ce6941);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-top: 121px;
+}
+
+.new-car-reviews-title{
+     margin-top: 45px;
+     margin-bottom: 30px;
+}
+
+.new-car-reviews-title p{
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #212121;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.new-car-reviews-title p span{
+    border: 1px solid;
+}
+
+.new-car-review-body{
+    display: inline-flex;
+    max-width: 81%;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-bottom: 61px;
+}
+
+.new-car-review-body div{
+    position: relative;
+    width: 230px;
+    height: 230px;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.new-car-review-body div::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height:0;
+  opacity: 0;
+  border-left: 2px solid #F57F17;
+  border-top: 2px solid #F57F17;
+  z-index: 33;
+  transition: all 1s;
+}
+
+.new-car-review-body div::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width:0;
+  height: 0;
+  opacity: 0;
+  border-right: 2px solid #F57F17;
+  border-bottom: 2px solid #F57F17;
+  transition: all 1s;
+}
+
+.new-car-review-body div:hover::before,.new-car-review-body div:hover::after {
+
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+
+}
+
+.new-car-review-body div img{
+  width: 230px;
+  height: 230px;
+  transition: all 1s;
+}
+
+.new-car-review-body div:hover img{
+  transform: scale(1.2);
+  opacity: .7;
+}
+.new-car-review-body div h2{
+  position: absolute;
+  font-size: 16px;
+  left: 50%;
+  top: 50%;
+  background-color: #4b453d;
+  padding: 10px;
+  -ms-transform: translate(-50%,-50%) scale(0);
+  -webkit-transform:translate(-50%,-50%) scale(0);
+  transform: translate(-50%,-50%) scale(0);
+  box-sizing: border-box;
+  color: #e9801a;
+  font-weight: 600;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 1s;
+
+}
+.new-car-review-body div:hover h2{
+  transform: translate(-50%,-50%) scale(1);
+}
+
+.new-car-review-body div p{
+    color: #BF360C;
+    float: right;
+    position: absolute;
+    top: 28%;
+    transform: translateY(-50%);
+    left: 36%;
+    font-size: 21px;
+    font-family: 'Ubuntu', sans-serif;
+    display: none;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+.research-car-model{
+    background-image: url("../images/research.jpeg");
+    margin-top: 65px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-position: -253px -613px;
+}
+
+.research-car-model-title{
+     margin-top: 36px;
+}
+
+.research-car-model-title p{
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #BF360C;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.research-car-model-title p span{
+    border: 1px solid;
+}
+
+.research-car-model-body{
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 67px;
+    margin-bottom: 53px;
+}
+
+.research-car-model-body div{
+    width: 24%;
+    box-sizing: border-box;
+    padding-right: 0;
+}
+
+
+.research-car-model-body div p{
+
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(255,255,255,.7);
+    padding: 15px 0px 7px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.research-car-model-body div a{
+
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0,0,0,.3);
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+.footer{
+    height: 348px;
+    background-color: #3E2723;
+    margin-top: 61px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.lists{
+    display: inline-flex;
+    margin: auto;
+}
+
+.list1{
+    padding-left: 67px;
+}
+
+.list1 h3 , .list2 h3, .list3 h3{
+    color: #BF360C;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+}
+
+.list1 ul , .list2 ul , .list3 ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-right: 90px;
+}
+
+.list1 ul li a , .list2 ul li a , .list3 ul li a{
+
+    color: #ddd6cc;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tpa {
+    margin-top: 5px;
+    padding: 0;
+
+}
+
+.tpa ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-flex;
+}
+
+.tpa ul li{
+    margin-right: 12px;
+}
+
+.tpa ul li a{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+.copyright {
+    margin-top: 5px;
+    padding: 0;
+}
+
+.copyright p{
+    float: right;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+}
