@@ -11,10 +11,11 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!------------------------------------------------------------------------------------------------------->
-                                                 <!-- call css files -->
+                                               <!-- call css files -->
 
         <!-- bootstrab -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
 
         <!-- font awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
@@ -67,9 +68,13 @@
 
 
                                 <i class="fas fa-language"></i>
-                                <a class="language" href="#">
+                                <div class="language">
                                         <p>language</p>
-                                </a>
+                                        <ul>
+                                            <li>arabic</li>
+                                            <li>English</li>
+                                        </ul>
+                                </div>
                         </div>
 
                         <div class="col-md-6 col-lg-6 col-xl-6">
@@ -473,7 +478,8 @@
         <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> -->
+        <script src="js/bootstrap.min.js"></script>
 
         <!-- my jsvascript file -->
         <script src=" <?php echo asset('js/style.js') ?> "></script>

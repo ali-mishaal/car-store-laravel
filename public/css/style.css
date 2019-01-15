@@ -46,7 +46,7 @@
 
 }
 
-.lang-lcat a{
+.lang-lcat a , .lang-lcat div{
 
     display: inline-block;
     color: #fff;
@@ -57,7 +57,12 @@
     transition: all .5s;
 }
 
-.lang-lcat a:hover{
+.lang-lcat a p , .lang-lcat div p{
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.lang-lcat a:hover p , .lang-lcat div:hover p{
   color: #F57F17;
 }
 
@@ -68,7 +73,7 @@
     margin-left: 13px;
 }
 
-.lang-lcat a:first-of-type::after{
+.lang-lcat a::after{
 
     content: '';
     position: absolute;
@@ -80,6 +85,43 @@
 
 }
 
+.language{
+  position: relative;
+}
+
+.language ul{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  list-style: none;
+  background-color: #261f1f;
+  top: 28px;
+  left: 13px;
+  font-size: 12px;
+  height: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  transition: all .5s;;
+}
+
+.language ul li{
+  padding: 10px 67px 6px 10px;
+  border-bottom: 1px solid #F57F17;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.language ul li:last-child{
+  border-bottom: none;
+}
+
+.language:hover ul{
+  height: 69px;
+}
+
+.language ul li:hover{
+  background-color: #8d3131;
+}
 
 .sea-log{
    float: right;
