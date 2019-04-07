@@ -71,6 +71,15 @@ function slideMove(){
 }
 
 
+$('.img-fluid').click(function(){
+
+       $("#search").toggle("fast");
+       $('#search').css('top','33px');
+
+});
+
+
+
 
 
 

@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Roboto|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-
+ @import url('https://fonts.googleapis.com/css?family=Exo+2');
 /*
     font-family: 'Allerta Stencil', sans-serif;
 
@@ -16,6 +15,10 @@
 
 */
 
+*{
+  padding: 0;
+  margin:0;
+}
 
 
 
@@ -39,10 +42,10 @@
 .lang-lcat i{
 
     color: #fff;
-    font-size: 21px;
+    font-size: 18px;
     display: inline-block;
     position: relative;
-    top: 3px;
+    top: 2px;
 
 }
 
@@ -51,7 +54,7 @@
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
     padding-left: 3px;
     transition: all .5s;
@@ -61,11 +64,6 @@
   cursor: pointer;
   transition: all .5s;
 }
-
-.lang-lcat a:hover p , .lang-lcat div:hover p{
-  color: #F57F17;
-}
-
 
 
 .lang-lcat i:last-of-type{
@@ -77,10 +75,10 @@
 
     content: '';
     position: absolute;
-    top: 6px;
-    left: 152px;
-    width: 2px;
-    height: 18px;
+    top: 9px;
+    left: 147px;
+    width: 1px;
+    height: 12px;
     background-color: #fff;
 
 }
@@ -126,19 +124,70 @@
 .sea-log{
    float: right;
    padding-right: 17px;
+   position: relative;
 
 }
 
 .sea-log img{
     width: 21px;
     margin-right: 5px;
+    cursor: pointer;
+}
+
+.sea-log #search{
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    z-index: 1000;
+    width: 311px;
+    background: #A84141;
+    border-radius: 5px;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+    transition: all .5s;
+
+}
+
+#search::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #A84141;
+}
+
+.sea-log #search form{
+  width: 100%;
+  height: 100%;
+}
+
+.sea-log form input{
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    margin: 17px 0px 17px 11px;
+    padding-left: 5px;
+    font-size: 13px;
+    width: 74%;
+    height: 30px;
+}
+
+.sea-log form input:last-child{
+    width: 56px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+
 }
 
 .sea-log a{
 
     color: #fff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
     transition: all .5s
 }
@@ -147,26 +196,39 @@
     padding-right: 10px;
 }
 
-.sea-log a:first-of-type:before{
+.sea-log #log:before{
     content: '';
     position: absolute;
-    top: 7px;
-    right: 89px;
-    width: 2px;
-    height: 15px;
+    top: 9px;
+    right: 70px;
+    width: 1px;
+    height: 12px;
     background-color: #fff;
 }
 
-.sea-log a:hover{
-  color: #F57F17;
+.sea-log .show{
+  min-width: 7rem;
+  padding: 2px 11px 7px;
+  background-color: rgb(168, 65, 65);
+  transform: translate3d(30px, 23px, 0px);
+  transition: all .5s;
+}
+
+.sea-log .show li a{
+  font-size: 13px;
+  transition: all .5s;
+}
+
+.sea-log .show li a:hover{
+  color: #3E2723;
 }
 
 /*-------------------------------------------------------------------------------------------------------------------------*/
 .social{
 
   position: absolute;
-  top: 42%;
-  left: 3%;
+  top: 93%;
+  left: 18%;
 }
 
 .social ul{
@@ -179,10 +241,12 @@
 
 .social ul li{
     margin-bottom: 5px;
+    float: right;
+    margin-right: 23px;
 }
 
 .social ul li a{
-    color: #877171;
+    color: #A84141;
     transition: all .5s;
 
 }
@@ -231,6 +295,8 @@
     float: right;
     margin-top: -42px;
     margin-right: 53px;
+    position: relative;
+    z-index: 10;
 }
 
 .heade-nav li{
@@ -241,7 +307,7 @@
 
     content: '';
     position: absolute;
-    top: 65px;
+    top: 30px;
     width: 85px;
     height: 1px;
     background-color: #B71C1C;
@@ -658,6 +724,7 @@
   color: #e9801a;
   font-weight: 600;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 35;
   transition: all 1s;
 
 }
@@ -809,4 +876,15 @@
     color: #fff;
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
+}
+
+.no-found{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: capitalize;
+    text-align: center;
+    border: 2px solid #ddd;
+    padding: 0 20px;
 }
