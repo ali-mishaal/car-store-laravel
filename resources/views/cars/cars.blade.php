@@ -199,37 +199,37 @@
     <!-- end main wrapper -->
 
     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Delete Car</h5>
-                                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </a>
-                                </div>
-                                <div class="modal-body">
-
-                                      <form method="post" action="{{ route('car.destroy' , 'test')}}" style="display: inline-block;" id="del-cat">
-
-                                          <input type="hidden" name="_method" value="DELETE" />
-                                                         
-                                          {{ csrf_field() }}     
-                                        
-                                     <h5 style="font-weight: 600;font-family: sans-serif;">
-                                      are you sure to <span style="color: red">delete</span> this record ?
-                                     </h5>
-                                    <input type="hidden" name="car_id" id="car_id" value="">
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-secondary" data-dismiss="modal">no,cancel</a>
-                                    <button class="btn btn-warning active">yes,delete</button>
-                                    
-                                </div>
-                                </form>
-                            </div>
-                        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delete Car</h5>
+                        <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </a>
                     </div>
+                    <div class="modal-body">
+
+                          <form method="post" action="{{ route('car.destroy' , 'test')}}" style="display: inline-block;" id="del-cat">
+
+                              <input type="hidden" name="_method" value="DELETE" />
+                                             
+                              {{ csrf_field() }}     
+                            
+                         <h5 style="font-weight: 600;font-family: sans-serif;">
+                          are you sure to <span style="color: red">delete</span> this record ?
+                         </h5>
+                        <input type="hidden" name="car_id" id="car_id" value="">
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn btn-secondary" data-dismiss="modal">no,cancel</a>
+                        <button class="btn btn-warning active">yes,delete</button>
+                        
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     <!-- ============================================================== -->
     <!-- Optional JavaScript -->

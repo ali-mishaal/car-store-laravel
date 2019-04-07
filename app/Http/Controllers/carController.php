@@ -135,6 +135,8 @@ class carController extends Controller
              'image'       => 'image|max:500000',
         ]);
 
+         $car = Car::find($id);
+
         if($request->hasFile('image'))
         {
             $file      = $request->file('image');
@@ -142,6 +144,14 @@ class carController extends Controller
             $mimeType  = $file->getClientMimeType();
             $fileName  = $file->getClientOriginalName();
             $size      = $file->getClientSize();
+
+             if( $car->image !== 'storage/avatar/no-image.png' ){
+                     $str = strpos($car->image , "car");
+                     $str = substr($car->image , $str);
+
+                     Storage::delete('public/avatar/'.$str);
+
+             }
             
             $image_name_will_store = 'car' . time() . '.' . $extension;
 
@@ -151,7 +161,7 @@ class carController extends Controller
             $image_name_will_store  = 'no-image.png';
         } 
 
-        $car = Car::find($id);
+       
         
         $car->name        = $request->input('name');
         $car->description = $request->input('description');
@@ -230,5 +240,60 @@ class carController extends Controller
 
        return redirect()->back()->with('success' , 'images Added');
 
+    }
+
+
+   public function edit_images(Request $request)
+   {
+      $image = Carimg::findOrFail($request->image_id);
+
+      if($request->hasFile('add-images'))
+        {
+            $file      = $request->file('add-images');
+            $extension = $file->getClientOriginalExtension();
+            $mimeType  = $file->getClientMimeType();
+            $fileName  = $file->getClientOriginalName();
+            $size      = $file->getClientSize();
+            
+            if( $image->image !== 'storage/carImages/no-image.png' ){
+                 $str = strpos($image->image, 'car');
+                 $str = strpos($image->image, 'car', $str + strlen('car'));
+                 $str = substr($image->image , $str);
+
+                 Storage::delete('public/carImages/'.$str);
+            }
+
+            $image_name_will_store = 'car' . rand(111,99999) . '.' . $extension; 
+            $path      = $file->storeAs('public/carImages' , $image_name_will_store);
+            
+            $image->car_id = $image->car->id;
+            $image->image  = 'storage/carImages/'.$image_name_will_store;
+            $image->save();
+            
+        }
+
+
+       return redirect()->back()->with('success' , 'images Edited');
+   }
+
+
+    public function delete_images(Request $request)
+    {
+        
+       $image = Carimg::findOrFail($request->image_id);
+
+        if( $image->image !== 'storage/carImages/no-image.png' ){
+             $str = strpos($image->image, 'car');
+             $str = strpos($image->image, 'car', $str + strlen('car'));
+             $str = substr($image->image , $str);
+
+             Storage::delete('public/carImages/'.$str);
+
+
+
+        }
+
+        $image->destroy($request->image_id);
+        return redirect(route('addImages' , $image->car->id))->with('msg','Image deleted success');
     }
 }

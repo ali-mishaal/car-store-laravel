@@ -65,6 +65,8 @@ Route::resource('/category' , 'categoryController');
 Route::resource('/car' , 'carController');
 Route::get('addimages/{id}' , 'carController@image_show')->name('addImages');
 Route::post('addimages/{id}' , 'carController@add_images')->name('storeImages');
+Route::post('editimages' , 'carController@edit_images')->name('edit.images');
+Route::post('deleteimages' , 'carController@delete_images')->name('deleteImages');
 
 //route for model
 Route::resource('/model' , 'modeController');

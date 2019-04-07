@@ -67,6 +67,12 @@
                               </div>
                             @endif
 
+                            @if(Session::has('msg'))
+                              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                  {{ session('msg') }}
+                              </div>
+                            @endif
+
 
                         </div>
 
@@ -123,9 +129,9 @@
 
                   
               <td>
-                      <button class="btn btn-success active" data-target="#exampleModal" data-toggle="modal" data-carid="{{ $cars->id }}">Edit</button>
+                      <button class="btn btn-success active" data-target="#editModal" data-toggle="modal" data-imageid="{{ $images->id }}">Edit</button>
 
-                      <button class="btn btn-danger active" data-target="#exampleModal" data-toggle="modal" data-carid="{{ $cars->id }}">DELETE</button>
+                      <button class="btn btn-danger active" data-target="#deleteModal" data-toggle="modal" data-imageid="{{ $images->id }}">DELETE</button>
                             
                 
               </td>
@@ -183,72 +189,66 @@
 
 
     <!-- Modal of edit  -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Delete Car</h5>
-                                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </a>
-                                </div>
-                                <div class="modal-body">
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eit Image</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </a>
+                </div>
+                <div class="modal-body">
 
-                                      <form method="post" action="{{ route('car.destroy' , 'test')}}" style="display: inline-block;" id="del-cat">
-
-                                          <input type="hidden" name="_method" value="DELETE" />
-                                                         
-                                          {{ csrf_field() }}     
-                                        
-                                     <h5 style="font-weight: 600;font-family: sans-serif;">
-                                      are you sure to <span style="color: red">delete</span> this record ?
-                                     </h5>
-                                    <input type="hidden" name="car_id" id="car_id" value="">
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-secondary" data-dismiss="modal">no,cancel</a>
-                                    <button class="btn btn-warning active">yes,delete</button>
-                                    
-                                </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                      <form method="post" action="{{ route('edit.images')}}" style="display: inline-block;" id="del-cat" enctype="multipart/form-data">
+                                         
+                          {{ csrf_field() }}     
+                    
+                    <input type="file" class="form-control" id="image-file" name="add-images" required>
+                    <input type="hidden" name="image_id" id="image_id" value="">
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-secondary" data-dismiss="modal">No,Cancel</a>
+                    <button class="btn btn-warning active">Edit</button>
+                    
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
 
     <!-- Modal of delete -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Delete Car</h5>
-                                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">×</span>
-                                            </a>
-                                </div>
-                                <div class="modal-body">
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Image</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </a>
+                </div>
+                <div class="modal-body">
 
-                                      <form method="post" action="{{ route('car.destroy' , 'test')}}" style="display: inline-block;" id="del-cat">
-
-                                          <input type="hidden" name="_method" value="DELETE" />
-                                                         
-                                          {{ csrf_field() }}     
-                                        
-                                     <h5 style="font-weight: 600;font-family: sans-serif;">
-                                      are you sure to <span style="color: red">delete</span> this record ?
-                                     </h5>
-                                    <input type="hidden" name="car_id" id="car_id" value="">
-                                </div>
-                                <div class="modal-footer">
-                                    <a href="#" class="btn btn-secondary" data-dismiss="modal">no,cancel</a>
-                                    <button class="btn btn-warning active">yes,delete</button>
-                                    
-                                </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                      <form method="post" action="{{ route('deleteImages')}}" style="display: inline-block;" id="del-cat">
+                                         
+                          {{ csrf_field() }}     
+                        
+                     <h5 style="font-weight: 600;font-family: sans-serif;">
+                      are you sure to <span style="color: red">delete</span> this record ?
+                     </h5>
+                    <input type="hidden" name="image_id" id="image_id" value="">
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-secondary" data-dismiss="modal">No,Cancel</a>
+                    <button class="btn btn-warning active">Delete</button>
+                    
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
  
         
 @endsection
@@ -263,15 +263,24 @@
     </script>
      <script type="text/javascript">
         $(document).ready(function(){
-                  alert('test');
-            // $('#exampleModal').on('show.bs.modal' , function(event){
+                  
+             $('#deleteModal').on('show.bs.modal' , function(event){
 
-            //     var button = $(event.relatedTarget)
-            //     var car_id = button.data('carid') 
-            //     var modal = $(this)
+                var button = $(event.relatedTarget)
+                var image_id = button.data('imageid') 
+                var modal = $(this)
 
-            //     modal.find('.modal-body #car_id') .val(car_id);
-            // });
+                modal.find('.modal-body #image_id') .val(image_id);
+            });
+
+            $('#editModal').on('show.bs.modal' , function(event){
+
+                var button = $(event.relatedTarget)
+                var image_id = button.data('imageid') 
+                var modal = $(this)
+
+                modal.find('.modal-body #image_id') .val(image_id);
+            });
  
         });
     </script>
