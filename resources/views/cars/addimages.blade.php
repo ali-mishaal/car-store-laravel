@@ -200,7 +200,7 @@
                 </div>
                 <div class="modal-body">
 
-                      <form method="post" action="{{ route('edit.images')}}" style="display: inline-block;" id="del-cat" enctype="multipart/form-data">
+                      <form method="post" action="{{ route('edit.images')}}" style="display: inline-block;width: 100%;" id="del-cat" enctype="multipart/form-data">
                                          
                           {{ csrf_field() }}     
                     

@@ -60,7 +60,7 @@
 
                                 <i class="fas fa-language"></i>
                                 <div class="language">
-                                        <p>{{ app()->getLocale() }}</p>
+                                        <p>{{ __('lang.language') }}</p>
                                         <ul>
                      <li><a href="locale/ar">{{ __('lang.arabic') }}</a></li>
                      <li><a href="locale/en">English</a></li>

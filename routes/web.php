@@ -26,6 +26,14 @@ Route::get('/' , function(){
       return view('welcome')->with('getCars' , $getCars);
 });
 
+// route for localization....................
+
+Route::get('locale/{locale}' ,function($locale){
+    
+     Session::put('locale' , $locale);
+     return redirect()->back();
+});
+
 // route for index page....................
 
 Route::get('/car-for-sale' , function(){
