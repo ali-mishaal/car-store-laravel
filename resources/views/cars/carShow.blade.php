@@ -41,9 +41,13 @@
       .car-images-sides
       {
         position: absolute;
-        background-color: rebeccapurple;
-        top: 32%;
-        right: 41%;
+        top: 36%;
+        right: 39%
+      }
+
+      .img{
+        display: block;
+        margin-bottom: 5px;
       }
 
   </style>
@@ -77,10 +81,35 @@
                        <img src="{{ asset($cars->image) }}" width="300px" height="350px" style="margin: 118px 0 118px 118px;">
                   </div>
                   <div class="car-images-sides">
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                        <img src="">
+                    @foreach ( $cars->carimg as $images)
+                      <img class="img" src="{{ asset($images->image) }}" width="60px" height="60px">
+                    @endforeach
+                  </div>
+                      
+                       
+                   
+ 
+
+           </div>
+     </div>
+
+     <div class="container padding ">
+            <div class="row latest-stories" style="margin: 66px 0;">
+                  <div class="car-title"><h2>Cars From The Same Model</h2></div>
+                  <div class="col-6">
+                     <p class="car-des">{{ $cars->description }}</p>
+                     <span class="car-mp">Model : {{ $cars->carmodel->name }}</span>
+                     <span class="car-mp">Mark : {{ $cars->mark }}</span> 
+                     <span class="car-mp">Price : {{ $cars->price }} EGP</span>
+                     <a href="#" class="btn btn-warning btn-lg active" role="button" aria-pressed="true" style="margin: 31px 0 0 396px;font-size: 16px;">Add Chart</a>
+                  </div>
+                  <div class="col-6">   
+                       <img src="{{ asset($cars->image) }}" width="300px" height="350px" style="margin: 118px 0 118px 118px;">
+                  </div>
+                  <div class="car-images-sides">
+                    @foreach ( $cars->carimg as $images)
+                      <img class="img" src="{{ asset($images->image) }}" width="60px" height="60px">
+                    @endforeach
                   </div>
                       
                        

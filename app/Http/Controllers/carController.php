@@ -100,7 +100,10 @@ class carController extends Controller
         $cars = Car::find($id);
         $cars->view = $cars->view + 1;
         $cars->save();
-        return view('cars.carShow')->with('cars',$cars);
+
+        $other_cars = Car::where('id' , '!=' , $id)->where('carmodel_id' , $cars->carmodel_id)->get();
+
+        return view('cars.carShow' , compact('cars' , 'other_cars'));
     }
 
     /**
