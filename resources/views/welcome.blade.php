@@ -19,10 +19,10 @@
                             <img class="image-fluid car-header" src="images/car1.png">
                             <p class="logo">CAR <span style="color:#B71C1C">STORE</span></p>
                             <ul class="heade-nav">
-                                   <li><a href="{{ route('car.sale') }}">car for sale</a></li>
-                                   <li><a href="{{ route('sell.car') }}">sell your car</a></li>
-                                   <li><a href="{{ route('service.repair') }}">services & repair</a></li>
-                                   <li><a href="{{ route('video.reviewws') }}">videos & reviews</a></li>
+                                   <li><a href="{{ route('car.sale') }}">{{ __('lang.car for sale') }}</a></li>
+                                   <li><a href="{{ route('sell.car') }}">{{ __('lang.sell your car') }}</a></li>
+                                   <li><a href="{{ route('service.repair') }}">{{ __('lang.services & repair') }}</a></li>
+                                   <li><a href="{{ route('video.reviewws') }}">{{ __('lang.videos & reviews') }}</a></li>
                             </ul>
 
                             <div class="social wow fadeInUp" data-wow-offset="0"  data-wow-duration="2s" data-wow-delay="1s">

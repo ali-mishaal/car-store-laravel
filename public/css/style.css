@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Allerta+Stencil|Roboto|Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -38,45 +39,40 @@
 }
 
 
+.lang-lcat div ,.lang-lcat div a , .lang-lcat div p{
+
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+
 
 .lang-lcat i{
 
     color: #fff;
     font-size: 18px;
-    display: inline-block;
     position: relative;
     top: 2px;
 
 }
 
-.lang-lcat a , .lang-lcat div{
+.location{
 
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: 'Roboto', sans-serif;
-    padding-left: 3px;
-    transition: all .5s;
+  margin-right: 11px;
 }
 
-.lang-lcat a p , .lang-lcat div p{
-  cursor: pointer;
-  transition: all .5s;
-}
-
-
-.lang-lcat i:last-of-type{
-
-    margin-left: 13px;
-}
-
-.lang-lcat a::after{
+.location::before{
 
     content: '';
     position: absolute;
-    top: 9px;
-    left: 147px;
+    top: 5px;
+    right: -7px;
     width: 1px;
     height: 12px;
     background-color: #fff;
@@ -92,9 +88,9 @@
   margin: 0;
   position: absolute;
   list-style: none;
-  background-color: #261f1f;
+  background-color: rgb(168, 65, 65);
   top: 28px;
-  left: 13px;
+  left: -1px;
   font-size: 12px;
   height: 0;
   overflow: hidden;
@@ -103,7 +99,7 @@
 }
 
 .language ul li{
-  padding: 10px 67px 6px 10px;
+  padding: 4px 35px 6px 10px;
   border-bottom: 1px solid #F57F17;
   cursor: pointer;
   transition: all .5s;
@@ -114,11 +110,11 @@
 }
 
 .language:hover ul{
-  height: 69px;
+  height: 61px;
 }
 
-.language ul li:hover{
-  background-color: #8d3131;
+.language ul li:hover a{
+  color: #3E2723;
 }
 
 .sea-log{
@@ -196,18 +192,23 @@
     padding-right: 10px;
 }
 
-.sea-log #log:before{
+.lio{
+  display: inline-block;
+  position: relative;
+}
+
+#lio::before{
     content: '';
     position: absolute;
     top: 9px;
-    right: 70px;
+    right: 2px;
     width: 1px;
-    height: 12px;
+    height: 11px;
     background-color: #fff;
 }
 
 .sea-log .show{
-  min-width: 7rem;
+  min-width: 6rem;
   padding: 2px 11px 7px;
   background-color: rgb(168, 65, 65);
   transform: translate3d(30px, 23px, 0px);
@@ -301,6 +302,7 @@
 
 .heade-nav li{
     margin-left: 40px;
+    position: relative;
 }
 
 .heade-nav li:before{
@@ -308,24 +310,13 @@
     content: '';
     position: absolute;
     top: 30px;
-    width: 85px;
+    width: 101%;
     height: 1px;
     background-color: #B71C1C;
     transform: scale(0);
     transition: all .5s;
 }
 
-.heade-nav li:nth-of-type(2):before{
-    width:92px;
-}
-
-.heade-nav li:nth-of-type(3):before{
-    width: 126px;
-}
-
-.heade-nav li:nth-of-type(4):before{
-    width: 125px;
-}
 
 .heade-nav li:hover:before{
   transform: scale(1);

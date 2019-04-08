@@ -120,7 +120,6 @@
     <script src="{{ asset('js/backend-js/datatables/buttons.bootstrap4.min.js') }}"></script>
     <script src="{{ asset('js/backend-js/datatables/data-table.js') }}"></script>
 
-
 @endsection
      
 

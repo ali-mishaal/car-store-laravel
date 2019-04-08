@@ -48,25 +48,30 @@
         <div class="container-fluid padding">
               <div class="row padding" style="padding-top: 9px;">
 
+                  <div class="lang-lcat col-md-6 col-lg-6 col-xl-6">
+                        
+                         
+                          <div class="location">
+                            <i class="fas fa-map-marker-alt fa-x"></i>
 
-                        <div class="lang-lcat col-md-6 col-lg-6 col-xl-6">
+                            <a href="#">
+                                <p>{{ __('lang.location') }}</p>
+                            </a>
 
-                               <i class="fas fa-map-marker-alt fa-x"></i>
-
-                                <a class="location" href="#">
-                                        <p>location</p>
-                                </a>
-
-
-                                <i class="fas fa-language"></i>
-                                <div class="language">
-                                        <p>{{ __('lang.language') }}</p>
-                                        <ul>
-                     <li><a href="locale/ar">{{ __('lang.arabic') }}</a></li>
-                     <li><a href="locale/en">English</a></li>
-                                        </ul>
-                                </div>
-                        </div>
+                          </div>
+                          <div class="language">
+                              <i class="fas fa-language"></i>
+                              <p>{{ __('lang.language') }}</p>
+                              <ul>
+                                <li>
+                                  <a href="locale/ar" style="font-size: 13px">{{ __('lang.arabic') }}</a>
+                                </li>
+                                <li>
+                                  <a href="locale/en" style="font-size: 13px">English</a>
+                                </li>
+                              </ul>
+                          </div>
+                  </div>
 
 
                         <div class="col-md-6 col-lg-6 col-xl-6">
@@ -90,7 +95,7 @@
                                         <ul class="dropdown-menu" role="menu">
                                             <li>
                                                 <a href="{{ route('user.logout') }}">
-                                                    Logout
+                                                    {{ __('lang.logout') }}
                                                 </a>
                                             </li>
                                         </ul>
@@ -102,15 +107,19 @@
                                             <li>
                                                 <a href="{{ route('admin.guard.logout') }}">
                                                     
-                                                    Logout
+                                                   {{ __('lang.logout') }}
                                                 </a>
 
                                                 
                                             </li>
                                         </ul>
-                                      @else  
-                                        <a href="{{ url('/login') }}" id="log">login</a>
-                                        <a href="{{ url('/register') }}">register</a>
+                                      @else 
+                                      <div class="lio" id="lio"> 
+                                        <a href="{{ url('/login') }}" id="log">{{ __('lang.login') }}</a>
+                                      </div>
+                                      <div class="lio">
+                                        <a href="{{ url('/register') }}">{{ __('lang.register') }}</a>
+                                      </div>
                                       @endif
                                    @endif
                             </div>
