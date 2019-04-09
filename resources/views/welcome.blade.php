@@ -36,8 +36,8 @@
                                 </ul>
                             </div>
 
-                            <p class="slide-word wow fadeIn" data-wow-offset="2"  data-wow-duration="2s" data-wow-delay="1s">find your </p>
-                            <p class="slide-word wow fadeInUp" data-wow-offset="-300"  data-wow-duration="2s" data-wow-delay="1s" style="padding-top: 0;width: 605px;"> next match</p>
+                            <p class="slide-word wow fadeIn" data-wow-offset="2"  data-wow-duration="2s" data-wow-delay="1s">{{ __('lang.find your') }} </p>
+                            <p class="slide-word wow fadeInUp" data-wow-offset="-300"  data-wow-duration="2s" data-wow-delay="1s" style="padding-top: 0;width: 605px;"> {{ __('lang.next match') }}</p>
                             <div id="brwonLayer"></div>
                             <div id="redLayer"></div>
 
@@ -89,7 +89,7 @@
      <!-- -------------------------------------------------------------------------------------------------------- -->
 
 
-        <div class="container trending-searches-body">
+       <!--  <div class="container trending-searches-body">
                <div class="row padding trending-search">
                      <div class="col-12  trending-searches-title">
                           <p><span>trending searches</span></p>
@@ -153,7 +153,7 @@
 
                </div>
         </div>
-
+ -->
      <!-- -------------------------------------------------------------------------------------------------------- -->
 
         <div class="container">
@@ -168,7 +168,7 @@
                           <div>
                                <img class="image-fluid" src="{{ asset($newCar->image) }}">
                                <h2>
-                                   <a href="{{ route('car.show' , $newCar->id) }}">
+                                   <a style="color: #F57F17;text-decoration: none" href="{{ route('car.show' , $newCar->id) }}">
                                       {{ $newCar->name }} 
                                    </a>
                               </h2>

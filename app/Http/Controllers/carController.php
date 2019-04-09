@@ -196,6 +196,22 @@ class carController extends Controller
 
         }
 
+        foreach ($car->carimg as $images) 
+        {
+            
+            if( $images->image !== 'storage/carImages/no-image.png' )
+            {
+                 $str = strpos($images->image, 'car');
+                 $str = strpos($images->image, 'car', $str + strlen('car'));
+                 $str = substr($images->image , $str);
+
+                 Storage::delete('public/carImages/'.$str);
+            }
+
+            $images->destroy($images->id);
+            
+        }
+
         $car->destroy($request->car_id);
         return redirect(route('car.index'))->with('msg','car deleted success');
 

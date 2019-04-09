@@ -12,6 +12,8 @@ return[
           'sell your car' => 'sell your car',
           'services & repair'=>'services & repair',
           'videos & reviews'=>'videos & reviews',
+          'find your' => 'find ypur',
+          'next match' => 'next match',
 
 
 ];

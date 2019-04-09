@@ -12,7 +12,8 @@ return[
           'sell your car' => 'اعرض سيارتك للبيع',
           'services & repair'=>'الخدمات والاصلاح',
           'videos & reviews'=>'المراجعات',
-
+          'find your' => 'ابحث عن',
+          'next match' => 'سيارتك القادمة',
 ];
 
 
